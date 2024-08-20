@@ -5,5 +5,6 @@ class Aluno:
         self.curso = curso
         self.disciplina = disciplina
         
-    
+import os
+print(os.getcwd())   
     
