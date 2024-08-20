@@ -3,8 +3,5 @@ class Aluno:
         self.matricula = matricula
         self.nome = nome
         self.curso = curso
-        self.disciplina = disciplina
-        
-import os
-print(os.getcwd())   
+        self.disciplina = disciplina  
     
