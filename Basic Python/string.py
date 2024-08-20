@@ -1,6 +1,5 @@
 minha_string = "programação"
 outra_string = "felipe,\ncagou,\nse limpou"
-
 print(f"felipe gosta de {minha_string}")
 
 print(minha_string.upper()) #todas as letras maisculas
