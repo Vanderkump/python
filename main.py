@@ -1,3 +1,3 @@
-from "https://github.com/Vanderkump/python/blob/main/aluno.py" import Aluno
+from aluno import Aluno
 
 aluno = Aluno(matricula,nome,curso,disciplinas)
