@@ -14,7 +14,7 @@ class Aluno:
                 else:
                     print("Aluno {} não foi matriculado na disciplina {}". format(self.nome, disc))
 
-    def insere_disciplina(self, disciplina):
+    def insere_disciplina(self, disciplina, disciplinas_disponiveis):
         if disciplina in disciplinas_disponiveis:
             self.disciplinas.append(disciplina)
             return "Aluno foi matriculado na disciuplina{}".format(disciplina)

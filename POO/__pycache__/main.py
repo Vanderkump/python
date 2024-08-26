@@ -15,7 +15,7 @@ aluno1 = Aluno("09354687390", "julia", "ECA", ["POO", "tecnicas de programação
 print(aluno.disciplinas)
 print(aluno1.disciplinas)
 
-print(aluno.insere_disciplina("Ciências Humanas"))
+print(aluno.insere_disciplina("Ciências Humanas", disciplina_disponiveis))
     
 
 print(aluno.disciplinas)
