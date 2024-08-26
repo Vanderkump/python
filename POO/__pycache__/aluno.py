@@ -8,15 +8,21 @@ class Aluno:
         for disc in disciplinas:
             for disc_disp in disciplina_disponiveis:
                 if disc == disc_disp.nome:
-                    self.disciplinas = disciplinas.append(disc)
+                    self.disciplinas.append(disc_disp)
                     print("Aluno {} foi matriculado na disciplina {}". format(self.nome, disc))
                     break
                 else:
                     print("Aluno {} não foi matriculado na disciplina {}". format(self.nome, disc))
-
+        
     def insere_disciplina(self, disciplina, disciplinas_disponiveis):
         if disciplina in disciplinas_disponiveis:
             self.disciplinas.append(disciplina)
             return "Aluno foi matriculado na disciuplina{}".format(disciplina)
         else:
             return "Aluno não foi matriculado na disciuplina{}".format(disciplina)
+        
+    def remove_disciplina(self, disciplina, disciplina_disponiveis):
+        for disc_disp in disciplina_disponiveis:
+            if disciplina == disc_disp.nome:
+                print("A disciplina esta na lista")
+                self.disciplinas.remove(disc_disp)
