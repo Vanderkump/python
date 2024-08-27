@@ -1,3 +1,5 @@
+import histórico 
+
 class Aluno:
     def __init__(self, matricula,nome,curso,disciplinas, disciplina_disponiveis):
         self.matricula = matricula
