@@ -7,6 +7,6 @@ class Historico():
         self.aluno = aluno
 
     def imprime_historico(self):
-        print("Histórico do aluno {}".format(self.aluno.matricula))
+        print("Histórico do aluno: matricula: {} nome: {}".format(self.aluno.matricula, self.aluno.nome))
         for h in self.disciplinas_cursadas:
             print("Disciplina {} com {} horas cursadas".format(h.nome,h.carga_horaria))
