@@ -1,5 +1,7 @@
 from aluno import Aluno
 from disciplina import Disciplina
+from Gerente import Gerente
+from Funcionario import Funcionario
 
 disciplina_disponiveis = []
 
@@ -20,6 +22,8 @@ print(aluno1.disciplinas)
 
 print(aluno.insere_disciplina("Ciências Humanas", disciplina_disponiveis))
 
+Funcionario.define_bonus()
+print(Funcionario.salario)
 #aluno.remove_disciplina("POO", disciplina_disponiveis)
 
 aluno1.historico.imprime_historico()

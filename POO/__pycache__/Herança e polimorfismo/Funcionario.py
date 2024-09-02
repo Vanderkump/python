@@ -8,3 +8,6 @@ class Funcionario(Pessoa):
         self.cadastro = cadastro
         self.funcao = funcao
         self.instituto = instituto
+
+    def define_bonus(self):
+        self.salario = super().define_bonus()* 1.15

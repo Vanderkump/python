@@ -11,3 +11,6 @@ class Pessoa():
             for disc_disp in disciplinas_disponiveis:
                 if disc == disc_disp.nome:
                     self.disciplinas.append(disc_disp)
+
+    def define_bonus(self):
+        return self.salario + 2000

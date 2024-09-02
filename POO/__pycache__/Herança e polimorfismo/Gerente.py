@@ -1,6 +1,7 @@
 from Funcionario import Funcionario
+from pessoa import Pessoa
 
-class Gerente(Funcionario):
+class Gerente(Pessoa):
     def __init__(self, nome, cpf, salario, senha,login, qtd_gerenciados):
         super().__init__(nome, cpf, salario)
         self.login = login
