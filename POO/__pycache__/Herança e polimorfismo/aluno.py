@@ -1,23 +1,14 @@
 from histórico import Historico 
+from pessoa import Pessoa
 
-class Aluno:
-    def __init__(self, matricula,nome,curso,disciplinas, disciplina_disponiveis):
+class Aluno(Pessoa):
+    def __init__(self, cpf, matricula, nome, curso, disciplinas,
+    disciplinas_disponiveis):
+        super().__init__(nome, cpf, curso, disciplinas, disciplinas_disponiveis)
         self.matricula = matricula
-        self.nome = nome
-        self.curso = curso
-        self.disciplinas = []
         self.historico = Historico(self)
 
-        for disc in disciplinas:
-            for disc_disp in disciplina_disponiveis:
-                if disc == disc_disp.nome:
-                    self.disciplinas.append(disc_disp)
-                    self.historico.disciplinas_cursadas.append(disc_disp)
-                    print("Aluno {} foi matriculado na disciplina {}". format(self.nome, disc))
-                    break
-                else:
-                    print("Aluno {} não foi matriculado na disciplina {}". format(self.nome, disc))
-        
+         
     def insere_disciplina(self, disciplina, disciplinas_disponiveis):
         if disciplina in disciplinas_disponiveis:
             self.disciplinas.append(disciplina)
