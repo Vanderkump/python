@@ -14,3 +14,23 @@ class Pessoa():
 
     def define_bonus(self):
         return self.salario + 2000
+    
+@property
+def nome(self):
+        return self._nome
+
+@cpf.setter
+def cpf(self, cpf):
+        self._cpf = cpf
+
+@curso.setter
+def curso(self, curso):
+        self._curso = curso
+
+@property
+def disciplinas(self):
+        return self._disciplinas 
+
+@salario.setter
+def salario(self, salario):
+        self._salari = salario
