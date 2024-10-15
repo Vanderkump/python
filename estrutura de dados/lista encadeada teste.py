@@ -10,40 +10,34 @@ class Lista():
     def insere(self, num):
         novo_no = No(num)
 
-      
         if self.cabeca == None:
             self.cabeca = novo_no
-            return
 
-        
-        if num < self.cabeca.num:
-            novo_no.prox = self.cabeca
-            self.cabeca = novo_no
-            return
-
-       
         aux = self.cabeca
-        while aux.prox is not None and aux.prox.num < num:
+        while(True):
+            if aux == None or aux.num > num:
+                break  
             aux = aux.prox
-        
-        
-        novo_no.prox = aux.prox
-        aux.prox = novo_no
+
+        if aux == self.cabeca: #primeiro elemento da lista
+            novo_no.prox = self.cabeca
+            self.cabeca = novo_no 
+        #elif aux = None: #ultimo elemento
+        #else: #elemento do meio 
 
     def imprime(self):
         aux = self.cabeca
-        while aux is not None:
+        while(True):
             print(aux.num)
             aux = aux.prox
 
-# Testando a lógica
+            if aux == None:
+                break
+
 lista = Lista()
 lista.insere(5)
 lista.insere(4)
 lista.insere(3)
 lista.insere(2)
 lista.insere(1)
-lista.insere(6)  # Inserindo no final
-lista.insere(0)  # Inserindo no início
-lista.insere(4.5) # Inserindo no meio
 lista.imprime()
